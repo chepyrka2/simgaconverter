@@ -1,4 +1,4 @@
-# simgaconverter
+# simgaconverter - console-based image converter
 Formats: PNG, JPG, GIF, BMP, TIFF
 ___
 Navigator | Навигатор
