@@ -1,4 +1,5 @@
 # simgaconverter
+Formats: PNG, JPG, GIF, BMP, TIFF
 ___
 Navigator | Навигатор
 
