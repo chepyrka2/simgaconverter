@@ -2,25 +2,25 @@
 ___
 Navigator | Навигатор
 
-[English](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#english)
+[English](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#english)
 
-  [Requirements](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#requirements)
+  [Requirements](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#requirements)
   
-  [How to change language?](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#how-to-change-language)
+  [How to change language?](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#how-to-change-language)
   
-  [How to launch?](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#how-to-launch)
+  [How to launch?](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#how-to-launch)
   
-  [Second variant](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#second-variant)
+  [Second variant](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#second-variant)
 
-[Русский](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#русский)
+[Русский](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#русский)
 
-  [Требования](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#требования)
+  [Требования](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#требования)
 
-  [Как изменить язык?](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#как-изменить-язык)
+  [Как изменить язык?](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#как-изменить-язык)
 
-  [Как запустить?](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#как-запустить)
+  [Как запустить?](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#как-запустить)
 
-  [Второй вариант](https://github.com/chepyrka2/simgaconverter/edit/main/README.md#второй-вариант)
+  [Второй вариант](https://github.com/chepyrka2/simgaconverter/tree/main/README.md#второй-вариант)
 ___
   
 ## ENGLISH
