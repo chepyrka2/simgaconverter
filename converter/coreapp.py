@@ -10,8 +10,25 @@ config = configparser.ConfigParser()
 config.read('lang.ini')
 LANG = 'DEFAULT'  # Assuming 'DEFAULT' is the section in lang.ini for languages
 lang_code = config[LANG].get('LANG', 'eng')  # Default to English if not found
-
-supported_extensions = [ex for ex, f in Image.registered_extensions().items() if f in Image.OPEN]
+formats_with_alpha = [
+    '.bmp',
+    '.png',
+    '.apng',
+    '.tif',  # TIFF can support alpha channels
+    '.tiff',  # TIFF can support alpha channels
+    '.psd',
+    '.qoi'
+    '.webp'
+]
+bad_file_extensions = [
+    ".blp", ".bufr", ".cur", ".dcx", ".eps", ".fit", ".fits",
+    ".fli", ".flc", ".ftc", ".ftu", ".gbr", ".h5", ".hdf",
+    ".icns", ".im", ".iim", ".mpg", ".mpeg", ".msp", ".pcd",
+    ".pxr", ".pnm", ".pfm", ".sgi", ".ras", ".tga", ".icb",
+    ".vda", ".vst", ".wmf", ".emf"
+]
+supported_extensios = [ex for ex, f in Image.registered_extensions().items() if f in Image.OPEN]
+supported_extensions = list(filter(lambda x: not(x in bad_file_extensions), supported_extensios))
 lang = lang_code
 
 def choosefile():
@@ -30,24 +47,16 @@ def choosefile():
 
 def convert():
     global file, choose
-    typeshi = input(f'{'Тип файла?' if lang == 'rus' else 'What type do you need?'} PNG (1), JPG (2), GIF (3), BMP (4) TIFF (5) ')
-    if typeshi == '1' or typeshi == '1' or typeshi == '4' or typeshi == '5':
+    typeshi = None
+    while not (typeshi in supported_extensions):
+        typeshi = input('Тип файла? (.type)' if lang == 'rus' else 'What type do you need? (.type)')
+        if not (typeshi in supported_extensions):
+            print('Неправильный формат!' if lang == 'rus' else 'Wrong extension!')
+    mode = typeshi
+    if mode in formats_with_alpha:
         pallete = 'RGBA'
     else:
         pallete = 'RGB'
-    if typeshi == '1':
-        mode = 'png'
-    elif typeshi == '2':
-        mode = 'jpg'
-    elif typeshi == '3':
-        mode = 'gif'
-    elif typeshi == '4':
-        mode = 'bmp'
-    elif typeshi == '5':
-        mode = 'tiff'
-    else:
-        print("Не введен доступный." if lang == 'rus' else "Wrong input")
-        exit(0)
     try:
         if file != None:
             img = Image.open(file)
@@ -61,24 +70,24 @@ def convert():
     except BaseException as e:
         print(f"Ошибка! Файл не конвертирован! Ошибка: {e}" if lang == 'rus' else f'Error! {e}')
         choose = 0
+if __name__ == "__main__":
+    while choose !=  3:
+        try:
+            choose = int(input('Convert an image (1) Check suppoerted extensions for input (2) Exit (3)' if lang == 'eng' else 'Конвертировать изображение (1) Узнать форматы которые можно вставить (2) Выход (3)'))
+            if not choose in range(1, 4):
+                choose = 0
+        except ValueError:
+            print('Not a number!' if lang == 'eng' else 'Не число!')
+        if choose == 1:
+            choosefile()
+            convert()
+            exit(0)
 
-while choose !=  3:
-    try:
-        choose = int(input('Convert an image (1) Check suppoerted extensions for input (2) Exit (3)' if lang == 'eng' else 'Конвертировать изображение (1) Узнать форматы которые можно вставить (2) Выход (3)'))
-        if not choose in range(1, 4):
+        if choose == 2:
+            print(supported_extensions)
             choose = 0
-    except ValueError:
-        print('Not a number!' if lang == 'eng' else 'Не число!')
-    if choose == 1:
-        choosefile()
-        convert()
-        exit(0)
-
-    if choose == 2:
-        print(supported_extensions)
-        choose = 0
-    if choose == 3:
-        exit(0)
+        if choose == 3:
+            exit(0)
 
 
 
