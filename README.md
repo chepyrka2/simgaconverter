@@ -30,7 +30,7 @@ ___
 > 
 > pillow==11.0.0
 ### How to change language?
-- Open lang.ini
+- Open lang.ini (coreapp/_internal/ if release)
 - Change lang to **eng** or **rus**
 ### How to launch?
 - If you use Windows just launch the .exe
@@ -44,7 +44,7 @@ ___
 > 
 > pillow == 11.0.0
 ### Как изменить язык?
-- Открыть lang.ini
+- Открыть lang.ini (coreapp/_internal/ в релизе)
 - Изменить lang на **eng** или **rus**
 ### Как запустить?
 - Если вы используете Windows, просто запустите .exe
