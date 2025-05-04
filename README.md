@@ -33,10 +33,10 @@ ___
 - Open lang.ini
 - Change lang to **eng** or **rus**
 ### How to launch?
-- open cmd or terminal from converter folder
-- python coreapp.py
+- If you use Windows just launch the .exe
+- Otherwise, open the project in VS Code with Python extension
 #### Second variant
-- launch the project in PyCharm
+- ```python -m converter/coreapp ``` from root code dir 
   ____
 ## РУССКИЙ
 ### Требования
@@ -47,7 +47,7 @@ ___
 - Открыть lang.ini
 - Изменить lang на **eng** или **rus**
 ### Как запустить?
-- открыть cmd или терминал из папки converter
-- python coreapp.py
+- Если вы используете Windows, просто запустите .exe
+- В противном случае откройте проект в VS Code с расширением Python.
 ### Второй вариант
-- запуск проекта в PyCharm
+- ```python -m Converter/coreapp ``` из корневой папки кода
