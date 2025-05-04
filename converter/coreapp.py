@@ -2,20 +2,18 @@ from tkinter.filedialog import askopenfilename
 import PIL
 from PIL import Image
 import datetime
-import arcade as a
+# import arcade as a
 import configparser
 
 choose = None
 config = configparser.ConfigParser()
 config.read('lang.ini')
-fontee = a.load_font('font/PixelifySans-VariableFont_wght.ttf')
-exts = PIL.Image.registered_extensions()
-supported_extensions = [ex for ex, f in exts.items() if f in Image.OPEN]
-ses = ''
-for i in supported_extensions:
-    ses = ses + i
-lang = config['LANG']['lang']
-print(lang)
+LANG = 'DEFAULT'  # Assuming 'DEFAULT' is the section in lang.ini for languages
+lang_code = config[LANG].get('LANG', 'eng')  # Default to English if not found
+
+supported_extensions = [ex for ex, f in Image.registered_extensions().items() if f in Image.OPEN]
+lang = lang_code
+
 def choosefile():
     global file
     tempfile = askopenfilename()
@@ -48,14 +46,14 @@ def convert():
     elif typeshi == '5':
         mode = 'tiff'
     else:
-
         print("Не введен доступный." if lang == 'rus' else "Wrong input")
         exit(0)
     try:
         if file != None:
             img = Image.open(file)
             im = img.convert(pallete)
-            im.save(f'converted {datetime.datetime.now()}.{mode}')
+            namef = input("Как назвать? (без расширения) ")
+            im.save(f'{namef}.{mode}')
             choose = 0
         else:
             return
@@ -77,7 +75,7 @@ while choose !=  3:
         exit(0)
 
     if choose == 2:
-        print(ses)
+        print(supported_extensions)
         choose = 0
     if choose == 3:
         exit(0)
