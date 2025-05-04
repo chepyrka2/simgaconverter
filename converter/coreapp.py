@@ -52,7 +52,7 @@ def convert():
         if file != None:
             img = Image.open(file)
             im = img.convert(pallete)
-            namef = input("Как назвать? (без расширения) ")
+            namef = input("Как назвать? (без расширения) " if lang == "rus" else "How to call it? (without extension) ")
             im.save(f'{namef}.{mode}')
             choose = 0
         else:
