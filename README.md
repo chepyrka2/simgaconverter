@@ -1,5 +1,5 @@
 # simgaconverter - console-based image converter
-Formats: PNG, JPG, GIF, BMP, TIFF
+Supported exts: bmp, dib, pcx, dds, ps, gif, grib, png, apng, jp2, j2k, jpc, jpf, jpx, j2c, ico, jfif, jpe, jpg, jpeg, tif, tiff, pbm, pgm, ppm, psd, qoi, bw, rgb, rgba, webp, xbm, xpm
 ___
 Navigator | Навигатор
 
