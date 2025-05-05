@@ -5,12 +5,13 @@ import datetime
 # import arcade as a
 import configparser
 
+
 choose = None
 config = configparser.ConfigParser()
 config.read('lang.ini')
 LANG = 'DEFAULT'  # Assuming 'DEFAULT' is the section in lang.ini for languages
 lang_code = config[LANG].get('LANG', 'eng')  # Default to English if not found
-formats_with_alpha = [
+formats_with_alpha = [\
     '.bmp',
     '.png',
     '.apng',
@@ -62,7 +63,7 @@ def convert():
             img = Image.open(file)
             im = img.convert(pallete)
             namef = input("Как назвать? (без расширения) " if lang == "rus" else "How to call it? (without extension) ")
-            im.save(f'{namef}.{mode}')
+            im.save(f'{namef}{mode}')
             choose = 0
         else:
             return
