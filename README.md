@@ -29,6 +29,8 @@ ___
 > python 3.12
 > 
 > pillow==11.0.0
+>
+> Flask==3.1.0
 ### How to change language?
 - Open lang.ini (coreapp/_internal/ if release)
 - Change lang to **eng** or **rus**
@@ -40,9 +42,11 @@ ___
   ____
 ## РУССКИЙ
 ### Требования
-> Python 3.12
+> python 3.12
 > 
-> pillow == 11.0.0
+> pillow==11.0.0
+>
+> Flask==3.1.0p
 ### Как изменить язык?
 - Открыть lang.ini (coreapp/_internal/ в релизе)
 - Изменить lang на **eng** или **rus**
