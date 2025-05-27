@@ -18,7 +18,9 @@ formats_with_alpha = [
     '.tiff',  # TIFF can support alpha channels
     '.psd',
     '.qoi'
-    '.webp'
+    '.webp',
+    '.rgba'
+    
 ]
 bad_file_extensions = [
     ".blp", ".bufr", ".cur", ".dcx", ".eps", ".fit", ".fits",
@@ -62,7 +64,7 @@ def convert():
             img = Image.open(file)
             im = img.convert(pallete)
             namef = input("Как назвать? (без расширения) " if lang == "rus" else "How to call it? (without extension) ")
-            im.save(f'{namef}.{mode}')
+            im.save(f'{namef}{mode}')
             choose = 0
         else:
             return
